@@ -140,7 +140,7 @@ const showTable = () => {
     tb_body.innerHTML += tb_body.innerHTML = `<tr id="register" class="table__tbody-tr">
       <td id="r_id" class="table__td">${user.id}</td>
       <td id="r_name" class="table__td">${user.first_name + ' ' + user.last_name}</td>
-      <td id="r_birth" class="table__td">${user.dayBirth === NaN ? calcAge(user.dayBirth) + ' años' : '-'}</td>
+      <td id="r_birth" class="table__td">${user.dayBirth ? calcAge(user.dayBirth) + ' años' : '-'}</td>
       <td id="r_email" class="table__td">${user.email}</td>
     </tr>
     `;
