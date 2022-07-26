@@ -1,0 +1,154 @@
+:root {
+  --bg: #30391F;
+  --bg-secondary: #668A4C;
+  --bg-light: #FFF;
+  --color-red: #B91C1C;
+  --color-redSecondary: #FECACA;
+  --font-primary: 'Roboto', sans-serif;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: var(--font-primary);
+  color: #464646;
+}
+
+*{
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--bg);
+  font-size: 1.5rem;
+}
+
+.header {
+  width: 100%;
+  padding: 2rem 3rem;
+  display: flex;
+  justify-content: center;
+  background-color: var(--bg-secondary);
+}
+
+@media screen and (min-width: 768px) { 
+    .header {
+      justify-content: end;
+    }
+}
+
+.header__navbar-item {
+  text-decoration: none;
+  color: white;
+  padding: 1rem 2rem;
+  transition: background-color 0.1s ease;
+}
+
+.header__navbar-item:hover {
+  background-color: var(--bg);
+}
+
+.container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  padding:2rem;
+}
+
+@media screen and (min-width: 768px) { 
+    .container {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+}
+
+.container__form, .container__table {
+  width: 100%;
+  background-color: var(--bg-light);
+  border-radius: 0.5rem;
+  padding: 2rem;
+  color: black;
+}
+
+.form__inputs {
+  width: 100%;
+  margin-bottom: 0.5rem;
+}
+
+.form__inputs-label {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.form__inputs-input {
+  width: 100%;
+  padding: 1rem;
+  outline: none;
+  border-radius: 0.5rem;
+  border: none;
+  background-color: #e3e3e3;
+}
+
+.btn {
+  display: block;
+  width: 50%;
+  margin: 0 auto;
+  padding: 1rem;
+  margin-top: 2rem;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: background-color 0.1s ease;
+}
+
+.btn__primary {
+  background-color: var(--bg-secondary);
+  color: white;
+}
+
+.btn__primary:hover {
+  background-color: var(--bg);
+}
+
+.container__table {
+  max-height: 35.8rem;
+  overflow: scroll;
+}
+
+@media screen and (min-width: 768px) { 
+   .container__table {
+    overflow-x: hidden
+   } 
+}
+
+.table {
+  width: 100%;
+  display: block;
+  text-align: center;
+}
+
+.table__thead {
+  background-color: var(--bg-secondary);
+}
+
+.table__tbody-tr:nth-child(even) {
+  background-color: #b7cca9;
+}
+
+.table__th {
+  width: 100%;
+  padding: 1rem 2rem;
+  color: white;
+  font-weight: 400;
+}
+
+.table__td {
+  width: 100%;
+  padding: 1rem 2rem;
+}
+
+/*---------------------------------------------------- error ---------------------------------------*/
+.error {
+  border: 1px solid var(--color-red);
+  background-color: var(--color-redSecondary);
+}
